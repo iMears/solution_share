@@ -9,7 +9,7 @@ print ">"
 challenge_num = gets.chomp.to_i
 
 puts # empty line
-puts @desert_rabbits.sort.map{|k,v| "#{k.to_s.capitalize}"} # prints sorted keys
+puts @desert_rabbits.sort_by.map{|k,v| v[0]} # prints sorted keys
 puts "\nLast name of student:"
 print ">"
 student = gets.chomp.downcase.to_sym
@@ -22,4 +22,4 @@ end
 
 puts # empty line
 puts "#{student.to_s}'s Week-#{week_number} Challenge-#{challenge_num} link:"
-puts "http://github.com/#{@desert_rabbits[student]}#{@all_weeks[week_number-1][challenge_num-1]}"
+puts "http://github.com/#{@desert_rabbits[student][1]}#{@all_weeks[week_number-1][challenge_num-1]}"
