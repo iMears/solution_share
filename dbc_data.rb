@@ -16,10 +16,8 @@ def open_link
   if visit == 'y'
     puts 'Opening link...'
     exec('open ' + @final_url)
-    review_more
   else
-    puts 'Copy and paste link into browser.'
-    puts "\n#{@cohort[@student][0]}'s Week-#{week_number} Challenge-#{challenge_num} link:"
+    puts "\n#{@cohort[@student][0]}'s Week-#{@week_number} Challenge-#{@challenge_num} link:"
     puts @final_url
     review_more
   end
