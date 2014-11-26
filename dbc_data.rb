@@ -126,7 +126,7 @@
                   sison: ['Hannah Sison', 'hsison'],
                   mcintyre: ['Jeremy McIntyre', 'jeremymcintyre'],
                   foley: ['John Foley', 'johnwfoley'],
-                  luse: ['Jordan  Luse', 'JLuse'],
+                  luse: ['Jordan Luse', 'JLuse'],
                   won: ['Joseph Won', 'godspeedyoo'],
                   tice: ['Kindy Tice', 'ktice74'],
                   villwock: ['Matthew Villwock', 'mtvillwock'],
