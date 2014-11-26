@@ -1,3 +1,37 @@
+def review_more
+  puts "\nReview more solutions?"
+  print '>'
+  again = gets.chomp[0].downcase
+  if again == 'y'
+    exec('ruby solution_share.rb')
+  else
+    puts "\nThanks for using Solution Share!"
+  end
+end
+
+def open_link
+  puts "\nOpen link now?"
+  print '>'
+  visit = gets.chomp[0].downcase
+  if visit == 'y'
+    puts 'Opening link...'
+    exec('open ' + @final_url)
+    review_more
+  else
+    puts 'Copy and paste link into browser.'
+    puts "\n#{@cohort[@student][0]}'s Week-#{week_number} Challenge-#{challenge_num} link:"
+    puts @final_url
+    review_more
+  end
+end
+
+def check_name
+  while !@cohort.include?(@student) # loop until given a valid last name
+    puts "\nError: Please enter correct last name:"
+    print ">"
+    @student = gets.chomp.downcase.to_sym
+  end
+end
 
 @week_1 = ['/phase-0-unit-1/tree/master/week-1/1-command-line',
           '/phase-0-unit-1/tree/master/week-1/2-computer-setup',
@@ -166,9 +200,4 @@
                   ratkalkar: ['Vivek Ratkalkar', 'vratkalkar']
                 }
 
-
-# #@cohort_dir = {"Desert Rabits" => @desert_rabbits,
-#                 "Eastern Moose" => @eastern_moose
-#               }
-
-
+@cohort_dir = [@desert_rabbits, @eastern_moose]
