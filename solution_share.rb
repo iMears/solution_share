@@ -9,7 +9,7 @@ print ">"
 challenge_num = gets.chomp.to_i
 
 puts # empty line
-puts @desert_rabbits.sort.map{|k,v| "#{k.to_s.capitalize}"} # sorts and prints last names
+puts @desert_rabbits.sort.map{|k,v| "#{k.to_s.capitalize}"} # prints sorted keys
 puts "\nLast name of student:"
 print ">"
 student = gets.chomp.downcase.to_sym
@@ -17,7 +17,7 @@ student = gets.chomp.downcase.to_sym
 while !@desert_rabbits.include?(student) # loop until given a valid last name
   puts "\nError: Please enter correct last name:"
   print ">"
-  student = gets.chomp.capitalize.to_sym
+  student = gets.chomp.downcase.to_sym
 end
 
 puts # empty line
