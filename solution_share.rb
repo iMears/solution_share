@@ -9,7 +9,7 @@ print ">"
 challenge_num = gets.chomp.to_i
 
 puts # empty line
-@desert_rabbits.each {|k, v| puts k} # prints all last names
+puts @desert_rabbits.sort.map{|k,v| "#{k.to_s.capitalize}"} # sorts and prints last names
 puts "\nLast name of student:"
 print ">"
 student = gets.chomp.capitalize.to_sym
