@@ -8,6 +8,7 @@ puts "Challenge number:"
 print ">"
 challenge_num = gets.chomp.to_i
 
+puts # empty line
 @desert_rabbits.each {|k, v| puts k} # prints all last names
 puts "\nLast name of student:"
 print ">"
