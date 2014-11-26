@@ -113,7 +113,8 @@
 @all_weeks = [@week_1, @week_2, @week_3, @week_4, @week_5, @week_6, @week_7, @week_8, @week_9]
 
 
-@desert_rabbits = {karlsberg: ['Aaron Karlsberg', 'aaronkarlsberg'],
+@desert_rabbits = {#title: 'Desert Rabbits',
+                  karlsberg: ['Aaron Karlsberg', 'aaronkarlsberg'],
                   esmaili: ['Ali Esmaili', 'AESM'],
                   vaughan: ['Andrew Vaughan', 'avaughan89'],
                   field: ['Angela Field', 'angelafield'],
@@ -142,3 +143,32 @@
                   fialho: ['Vivian Vieira Fialho', 'vivivf'],
                   tsang: ['William Tsang', 'kaawang']
                 }
+
+@eastern_moose = {#title: 'Eastern Moose',
+                  singh: ['Amar Singh', 'ummerr'],
+                  kim: ['Daniel Kim', 'bungfoon'],
+                  shin: ['Daniella Shin', 'thedanplan'],
+                  reeves: ['Darrin Reeves', 'dxr4841'],
+                  deneroff: ['David Deneroff', 'daviddeneroff'],
+                  rifkin: ['David Rifkin', 'dlrifkin'],
+                  lee: ['Dongchul Lee', 'i-love-ruby'],
+                  miller: ['Jennifer Miller', 'JennMiller'],
+                  campbell: ['Jon Campbell', 'heycampbell'],
+                  breece: ['Kenn Breece', 'kjb085'],
+                  perumal:['Kevin Perumal', 'kevinperumal'],
+                  nguyen: ['Mai Nguyen','mxngyn'],
+                  boutaleb: ['Rayan Boutaleb', 'rayanb'],
+                  kartzman: ['Remy kartzman', 'rkartzman'],
+                  pergams: ['Rosa Pergams', 'rosapergams'],
+                  rathi: ['Sagar Rathi', 'sagararathi'],
+                  enriquez: ['Scott Enriquez', 'sjenriquez'],
+                  vietrova: ['Tamara Vietrova', 'Summerwind1005'],
+                  ratkalkar: ['Vivek Ratkalkar', 'vratkalkar']
+                }
+
+
+@cohort_dir = {"Desert Rabits" => @desert_rabbits,
+                "Eastern Moose" => @eastern_moose
+              }
+
+
