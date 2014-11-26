@@ -4,13 +4,14 @@ puts "Week number:"
 print ">"
 week_number = gets.chomp.to_i
 
+puts # empty line
 puts "Challenge number:"
 print ">"
 challenge_num = gets.chomp.to_i
 
 puts # empty line
 puts @desert_rabbits.sort_by.map{|k,v| v[0]} # prints sorted keys
-puts "\nLast name of student:"
+puts "\nStudent last name:"
 print ">"
 student = gets.chomp.downcase.to_sym
 
