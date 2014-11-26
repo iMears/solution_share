@@ -21,5 +21,5 @@ while !@desert_rabbits.include?(student) # loop until given a valid last name
 end
 
 puts # empty line
-puts "#{student.to_s}'s Week-#{week_number} Challenge-#{challenge_num} link:"
+puts "#{@desert_rabbits[student][0]}'s Week-#{week_number} Challenge-#{challenge_num} link:"
 puts "http://github.com/#{@desert_rabbits[student][1]}#{@all_weeks[week_number-1][challenge_num-1]}"
