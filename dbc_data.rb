@@ -113,7 +113,7 @@
 @all_weeks = [@week_1, @week_2, @week_3, @week_4, @week_5, @week_6, @week_7, @week_8, @week_9]
 
 
-@desert_rabbits = {#title: 'Desert Rabbits',
+@desert_rabbits = {
                   karlsberg: ['Aaron Karlsberg', 'aaronkarlsberg'],
                   esmaili: ['Ali Esmaili', 'AESM'],
                   vaughan: ['Andrew Vaughan', 'avaughan89'],
@@ -144,7 +144,7 @@
                   tsang: ['William Tsang', 'kaawang']
                 }
 
-@eastern_moose = {#title: 'Eastern Moose',
+@eastern_moose = {
                   singh: ['Amar Singh', 'ummerr'],
                   kim: ['Daniel Kim', 'bungfoon'],
                   shin: ['Daniella Shin', 'thedanplan'],
@@ -167,8 +167,8 @@
                 }
 
 
-@cohort_dir = {"Desert Rabits" => @desert_rabbits,
-                "Eastern Moose" => @eastern_moose
-              }
+# #@cohort_dir = {"Desert Rabits" => @desert_rabbits,
+#                 "Eastern Moose" => @eastern_moose
+#               }
 
 

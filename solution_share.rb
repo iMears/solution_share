@@ -1,5 +1,6 @@
 require './dbc_data'
 
+
 puts "Week number:"
 print ">"
 week_number = gets.chomp.to_i
@@ -46,7 +47,17 @@ puts final_url
 puts 'Would you like to visit them now?'
 
 visit = gets.chomp[0].downcase
-if visit == 'y'
+  if visit == 'y'
     puts 'Opening in your browser'
     exec('open ' + final_url)
+  else
+    puts 'Copy and paste the above link in your browser.'
+  end
+
+puts 'Would you like to review any other code?'
+again = gets.chomp[0].downcase
+if again == 'y'
+    exec('ruby solution_share.rb')
+  else
+    puts 'Have a nice day!'
   end
