@@ -1,0 +1,10 @@
+<form action="/" method="POST">
+    <input type="text" placeholder="week" name="week">
+    <input type="text" placeholder="challenge" name="challenge">
+    <input type="text" placeholder="name" name="name">
+    <input type="submit" value="Submit">
+  </form>
+
+<%if @params.length > 1 %>
+<%= @params %>
+<%end%>

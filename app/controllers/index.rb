@@ -1,10 +1,15 @@
 get '/' do
-  erb: index
+  erb :index
 end
 
 
-post '/' do
+post '/solutions' do
+
   p params
-  erb: index
+  @params = params
+  params[:week], params[:challenge], params[:name]
+  links_array = []
+  {links: links_array}.to_json
 end
+
 
