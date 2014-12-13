@@ -1,7 +1,15 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  $('form').on('submit', handleSubmit);
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  function handleSubmit(e) {
+    var url = '/links?' + $(this).serialize();
+    $.getJSON(url)
+      .done(function(response) {
+        var link = response.links[0];
+        var html = '<a href=' + link + '>' + link + '</a>';
+
+        $('#link-container').html(html);
+      });
+    e.preventDefault();
+  }
 });

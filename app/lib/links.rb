@@ -50,7 +50,7 @@ module Links
     student_name = args[:student_name].to_sym
     week_num = args[:week_num].to_i
     # challenge_num = args[:challenge_num]
-    "http://github.com/#{DESERT_RABBITS[student_name][1]}#{WEEK_1[week_num-1]}"
+    ["http://github.com/#{DESERT_RABBITS[student_name][1]}#{WEEK_1[week_num-1]}"]
   end
 
 end
