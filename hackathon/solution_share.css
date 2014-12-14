@@ -1,0 +1,67 @@
+body {
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  background-color: #ccc;
+}
+
+/******** CONTAINER ******/
+
+.container{
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  max-height: 60%;
+}
+
+header {
+  background-color: rgba(0,0,0,0.55);
+  text-align: center;
+  margin-top: 200px;
+  padding: 1px;
+  color: #fff;
+  font-family: 'Raleway';
+}
+
+h1 {
+  letter-spacing: 0.1em;
+  font-size: 3em;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+video {
+  position: absolute; // Play the video in full screen mode
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1; // Put the video behind all other elements
+}
+
+/******** BUTTONS ******/
+
+article {
+  position: absolute;
+  bottom: 8%;
+  left: 30%;
+  margin: auto;
+  width: 500px;
+}
+
+select {
+  display: block;
+  margin: 20px auto;
+  width: 480px;
+  /*height: ;*/
+  font-size: 2em; /* This is as big as the select buttons display for now */
+
+}
+
+article div {
+  margin: 10px;
+}
