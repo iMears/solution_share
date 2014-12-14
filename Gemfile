@@ -26,5 +26,5 @@ end
 group :test, :development do
   gem 'factory_girl'
   gem 'faker'
-  gem 'debugger'
+  gem 'pry'
 end
