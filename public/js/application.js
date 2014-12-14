@@ -2,15 +2,23 @@ $(document).ready(function() {
   var prevSelectedCohortId;
   var $cohortSelect = $('#cohorts');
   var $studentSelect = $('#students');
+  var $challengeSelect = $('#challenges');
+  var $solutionLink = $('#solution-link');
 
   // Show Desert Rabbits by default
   showStudents(1);
+  updateDisplayedCurrentLink();
 
   $cohortSelect.on('change', function(e) {
     var selectedCohortId = $(this).find('option:selected').val();
     hideStudents(prevSelectedCohortId);
     showStudents(selectedCohortId);
   });
+
+  $cohortSelect.on('change', updateDisplayedCurrentLink);
+  $studentSelect.on('change', updateDisplayedCurrentLink);
+  $challengeSelect.on('change', updateDisplayedCurrentLink);
+  $solutionLink.on('change', updateDisplayedCurrentLink);
 
   function showStudents(cohortId) {
     var $students = $studentSelect.find("[data-cohort-id=" + cohortId  + "]").show()
@@ -25,6 +33,22 @@ $(document).ready(function() {
     prevSelectedCohortId = cohortId;
     $studentSelect.find("[data-cohort-id=" + cohortId  + "]").hide();
   }
+
+  function buildCurrentLink() {
+    var domain = 'https://github.com/';
+    var username = $('#students').find('option:selected').data('username');
+    var challengePath = $challengeSelect.find('option:selected').val();
+
+    return domain + username + challengePath;
+  }
+
+  function updateDisplayedCurrentLink() {
+    var currentLink = buildCurrentLink();
+
+    $solutionLink.attr('href', currentLink);
+    $solutionLink.text(currentLink);
+  }
+
 });
 
 // https://github.com/devin-liu/phase-0-unit-2/tree/master/week-4/1-add-it-up
