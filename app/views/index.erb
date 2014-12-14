@@ -1,9 +1,30 @@
-<form>
+<!-- <form>
   <input type="text" placeholder="week" name="week_num" value="1">
-  <input type="text" placeholder="challenge" name="challenge_num">
-  <input type="text" placeholder="name" name="student_name" value="field">
+  <input type="text" placeholder="challenge" name="challenge_num" value="1">
+  <input type="text" placeholder="github name" name="username" >
+  <input type="text" placeholder="cohort" name="cohort">
   <input type="submit" value="Submit">
 </form>
 
-<div id="link-container">
+
+ -->
+
+
+<% @cohorts.each do |cohort| %>
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><%= cohort.name  %><span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <% @weeks.each do |week| %>
+      <li>
+        <form action="/links" method="get">
+          <input type="hidden" name="challenge" value="<%= week %>"/>
+          <input type="hidden" name="cohort" value="<%= cohort.name %>"/>
+          <button><%= week %></button>
+        </form>
+      </li>
+    <% end %>
+  </ul>
 </div>
+<% end %>
+

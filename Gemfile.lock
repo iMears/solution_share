@@ -90,6 +90,7 @@ DEPENDENCIES
   debugger
   factory_girl
   faker
+  json
   pg
   rack-test
   rake

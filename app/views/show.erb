@@ -1,0 +1,18 @@
+
+
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><%= "students"  %><span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+  <% @students.each do |student| %>
+    <li>
+      <form action="https://github.com/<%= student.username %><%= @github_link %>" method="get">
+        <button><%= student.name %></button>
+      </form>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+
+
