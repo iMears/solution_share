@@ -1,13 +1,21 @@
 $(document).ready(function() {
   var prevSelectedCohortId;
+  var prevSelectedWeekId;
   var $cohortSelect = $('#cohorts');
   var $studentSelect = $('#students');
+  var $weekSelect = $('#weeks');
   var $challengeSelect = $('#challenges');
   var $solutionLink = $('#solution-link');
 
   // Show Desert Rabbits by default
   showStudents(1);
+  showChallenges(1);
   updateDisplayedCurrentLink();
+
+  $cohortSelect.on('change', updateDisplayedCurrentLink);
+  $studentSelect.on('change', updateDisplayedCurrentLink);
+  $challengeSelect.on('change', updateDisplayedCurrentLink);
+  $solutionLink.on('change', updateDisplayedCurrentLink);
 
   $cohortSelect.on('change', function(e) {
     var selectedCohortId = $(this).find('option:selected').val();
@@ -15,10 +23,11 @@ $(document).ready(function() {
     showStudents(selectedCohortId);
   });
 
-  $cohortSelect.on('change', updateDisplayedCurrentLink);
-  $studentSelect.on('change', updateDisplayedCurrentLink);
-  $challengeSelect.on('change', updateDisplayedCurrentLink);
-  $solutionLink.on('change', updateDisplayedCurrentLink);
+  $weekSelect.on('change', function(e) {
+    var selectedWeekId = $(this).find('option:selected').data('id');
+    hideChallenges(prevSelectedWeekId);
+    showChallenges(selectedWeekId);
+  });
 
   function showStudents(cohortId) {
     var $students = $studentSelect.find("[data-cohort-id=" + cohortId  + "]").show()
@@ -32,6 +41,20 @@ $(document).ready(function() {
   function hideStudents(cohortId) {
     prevSelectedCohortId = cohortId;
     $studentSelect.find("[data-cohort-id=" + cohortId  + "]").hide();
+  }
+
+  function showChallenges(weekId) {
+    var $challenges = $challengeSelect.find("[data-week-id=" + weekId  + "]").show()
+    var firstWeekName = $challenges.eq(0).val();
+
+    prevSelectedWeekId = weekId;
+    $challengeSelect.val(firstWeekName);
+    $challenges.show();
+  }
+
+  function hideChallenges(weekId) {
+    prevSelectedWeekId = weekId;
+    $challengeSelect.find("[data-week-id=" + weekId  + "]").hide();
   }
 
   function buildCurrentLink() {
