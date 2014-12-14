@@ -1,30 +1,23 @@
-<!-- <form>
-  <input type="text" placeholder="week" name="week_num" value="1">
-  <input type="text" placeholder="challenge" name="challenge_num" value="1">
-  <input type="text" placeholder="github name" name="username" >
-  <input type="text" placeholder="cohort" name="cohort">
-  <input type="submit" value="Submit">
-</form>
+<select id="cohorts" name="cohort">
+  <% @cohorts.each do |cohort| %>
+    <option value="<%= cohort.id %>"><%= cohort.name  %></option>
+  <% end %>
+</select>
+<select id="students" name="student">
+  <% @students.each do |student| %>
+    <option value="<%= student.id %>" data-cohort-id="<%= student.cohort.id %>" data-username="<%= student.username %>"><%= student.name  %></option>
+  <% end %>
+</select>
+<select id="weeks" name="week">
+  <option>Week 1</option>
+</select>
+<select id="challenges" name="challenge">
+  <% @challenges.each do |challenge| %>
+    <option value="<%= challenge.path %>" data-week-id="<%= challenge.week %>"><%= challenge.name %></option>
+  <% end %>
+</select>
 
-
- -->
-
-
-<% @cohorts.each do |cohort| %>
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><%= cohort.name  %><span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <% @weeks.each do |week| %>
-      <li>
-        <form action="/links" method="get">
-          <input type="hidden" name="challenge" value="<%= week %>"/>
-          <input type="hidden" name="cohort" value="<%= cohort.name %>"/>
-          <button><%= week %></button>
-        </form>
-      </li>
-    <% end %>
-  </ul>
+<div>
+  <a id="solution-link"></a>
 </div>
-<% end %>
 
