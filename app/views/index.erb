@@ -9,7 +9,9 @@
   <% end %>
 </select>
 <select id="weeks" name="week">
-  <option>Week 1</option>
+  <% 9.times do |i| %>
+    <option data-id="<%= i+1 %>"><%= "Week #{i+1}" %></option>
+  <% end %>
 </select>
 <select id="challenges" name="challenge">
   <% @challenges.each do |challenge| %>
