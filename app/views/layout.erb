@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DBC Solution Share</title>
   <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
@@ -10,16 +14,29 @@
   <!--
     application.css is where you put your styles
   -->
-  <link rel="stylesheet" href="/css/application.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
+  <link rel="stylesheet" href="/css/application.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/css/bootstrap-select.min.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/js/application.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
+  <script src="/js/application.js"></script>
 
   <title></title>
 </head>
 <body>
+  <div class="container">
+    <video class="bgVideo" autoplay loop>
+      <!-- Video is embedded in the WEBM format -->
+      <source src= "video_banner2.mp4" type="video/mp4">
+    </video>
+    <header>
+      <h1>SOLUTION SHARE</h1>
+      <h2>For Students. By Students.</h2>
+    </header>
+  </div>
+
   <%= yield %>
 </body>
 </html>

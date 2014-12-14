@@ -1,25 +1,24 @@
-<select id="cohorts" name="cohort">
-  <% @cohorts.each do |cohort| %>
-    <option value="<%= cohort.id %>"><%= cohort.name  %></option>
-  <% end %>
-</select>
-<select id="students" name="student">
-  <% @students.each do |student| %>
-    <option value="<%= student.id %>" data-cohort-id="<%= student.cohort.id %>" data-username="<%= student.username %>"><%= student.name  %></option>
-  <% end %>
-</select>
-<select id="weeks" name="week">
-  <% 9.times do |i| %>
-    <option data-id="<%= i+1 %>"><%= "Week #{i+1}" %></option>
-  <% end %>
-</select>
-<select id="challenges" name="challenge">
-  <% @challenges.each do |challenge| %>
-    <option value="<%= challenge.path %>" data-week-id="<%= challenge.week %>"><%= challenge.name %></option>
-  <% end %>
-</select>
-
-<div>
-  <a id="solution-link"></a>
-</div>
+<article>
+  <select id="cohorts" name="cohort">
+    <% @cohorts.each do |cohort| %>
+      <option value="<%= cohort.id %>"><%= cohort.name  %></option>
+    <% end %>
+  </select>
+  <select id="students" name="student">
+    <% @students.each do |student| %>
+      <option value="<%= student.id %>" data-cohort-id="<%= student.cohort.id %>" data-username="<%= student.username %>"><%= student.name  %></option>
+    <% end %>
+  </select>
+  <select id="weeks" name="week">
+    <% 9.times do |i| %>
+      <option data-id="<%= i+1 %>"><%= "Week #{i+1}" %></option>
+    <% end %>
+  </select>
+  <select id="challenges" name="challenge">
+    <% @challenges.each do |challenge| %>
+      <option value="<%= challenge.path %>" data-week-id="<%= challenge.week %>"><%= challenge.name %></option>
+    <% end %>
+  </select>
+  <button id="go" type="button" class="btn btn-primary btn-lg btn-block">Go to Solution</button>
+</article>
 

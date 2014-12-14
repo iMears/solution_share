@@ -29,6 +29,10 @@ $(document).ready(function() {
     showChallenges(selectedWeekId);
   });
 
+  $('#go').on('click', function(e) {
+    window.location = buildCurrentLink();
+  });
+
   function showStudents(cohortId) {
     var $students = $studentSelect.find("[data-cohort-id=" + cohortId  + "]").show()
     var firstStudentName = $students.eq(0).val();
