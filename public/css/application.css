@@ -51,6 +51,13 @@ video {
   z-index: -1; // Put the video behind all other elements
 }
 
+#dbc {
+  position: absolute;
+  width: 13%;
+  left: 87%;
+  top: 209%;
+}
+
 /******** BUTTONS ******/
 
 article {
