@@ -10,14 +10,12 @@ require 'rubygems'
 require 'json'
 require 'uri'
 require 'pathname'
-
 require 'pg'
 require 'active_record'
 require 'logger'
-
 require 'sinatra'
 require "sinatra/reloader" if development?
-
+require 'pry' if development?
 require 'erb'
 
 # Some helper constants for path-centric logic
