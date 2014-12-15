@@ -11,6 +11,7 @@ gem 'activerecord', '~>4.1'
 gem 'rake'
 gem 'shotgun'
 gem 'json'
+gem 'thin'
 
 
 group :test do
