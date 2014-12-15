@@ -30,7 +30,7 @@ $(document).ready(function() {
   });
 
   $('#go').on('click', function(e) {
-    window.location = buildCurrentLink();
+    window.open(buildCurrentLink(), '_blank');
   });
 
   function showStudents(cohortId) {
